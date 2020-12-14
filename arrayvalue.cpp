@@ -11,12 +11,14 @@ void nBlock_ArrayValue::triggerInput(nBlocks_Message message) {
     if (message.dataType == OUTPUT_TYPE_ARRAY) {
         switch (message.dataType) {
             case OUTPUT_TYPE_INT:
-                output[0] = message.intValue;
+                uint32_t * int_array = (uint32_t *)(message.pointerValue);
+                output[0] = int_array[_index];
                 available[0] = 1;
                 break;
 
             case OUTPUT_TYPE_FLOAT:
-                output[0] = PackFloat(message.floatValue);
+                float * float_array = (float *)(message.pointerValue);
+                output[0] = PackFloat(float_array[_index]);
                 available[0] = 1;
                 break;
         }
