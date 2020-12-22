@@ -11,13 +11,14 @@
             "options": []
         },
         {
-            "default": "OUTPUT_TYPE_INT", 
-            "type": "raw", 
+            "default": "ARRAY_TYPE_INT", 
+            "type": "option", 
             "name": "Data Type", 
-            "value": "OUTPUT_TYPE_INT", 
+            "value": "ARRAY_TYPE_INT", 
             "options": [
-                "OUTPUT_TYPE_INT",
-                "OUTPUT_TYPE_FLOAT"
+                "ARRAY_TYPE_INT",
+                "ARRAY_TYPE_FLOAT",
+                "ARRAY_TYPE_CHAR"
             ]
         }
     ], 
